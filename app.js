@@ -79,7 +79,7 @@ function addTask(e) {
   taskList.appendChild(li);
 
   //Store in LS
-  storeTaskInLocalStorage();
+  storeTaskInLocalStorage(taskInput.value);
 
   // Clear input
   taskInput.value = '';
@@ -108,7 +108,7 @@ function removeTask(e) {
       e.target.parentElement.parentElement.remove();
 
       // Remove from LS 
-      removeTaskLocalStorage();
+      removeTaskLocalStorage(e.target.parentElement.parentElement);
     }
   }
 }
